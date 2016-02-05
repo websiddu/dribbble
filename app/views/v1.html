@@ -1,0 +1,234 @@
+<div class="banner-wrap">
+  <div class="banner">
+    <img alt="" ng-repeat="shot in shots" ng-src="{{shot.images.normal}}">
+  </div>
+</div>
+<div id="wrap">
+  <!--   <div class="full-tabs group">
+
+  </div> -->
+  <div id="wrap-inner">
+    <div id="content" class="group">
+      <div class="notice-alert">
+        <h3><!-- message goes here --></h3>
+        <a href="#" class="close">
+          <img width="25" src="https://d13yacurqjgara.cloudfront.net/assets/icon-shot-x-light-2x-9756a11988521f9ef45eaa04e69543ed.png" alt="Icon shot x light 2x">
+        </a>
+      </div>
+      <div id="main" class="main-full profile-container is-team">
+        <div class="profile-head">
+          <div class="profile-photo">
+            <a class="photo" rel="contact" title="MadeByShape" href="/madebyshape">
+              <div data-picture="" data-class="photo">
+                <div data-media="(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)"></div>
+                <img alt="null" class="photo" src="{{team.avatar_url}}">
+              </div>
+            </a>
+          </div>
+          <div class="profile-info">
+            <h1>
+              <div class="profile-name">
+                <a class="url" rel="contact" title="{{team.name}}" href="/madebyshape">
+                  <span class="name">{{team.name}}</span>
+                </a>
+              </div>
+            </h1>
+            <h3 class="profile-location">
+              <a class="location" href="/designers?location={{team.location}}">{{team.location}}</a>
+            </h3>
+            <h2 class="bio" ng-bind-html="team.bio"></h2>
+            <div class="follow-prompt">
+              <a class="follow" href="/madebyshape/followers">
+                <span>Follow</span>
+              </a>
+              <a class="unfollow" href="/madebyshape/followers/madebyshape">
+                <span>Following</span>
+              </a> <a class="unblock" data-hover="Unblock" href="/blocks/madebyshape">Blocked</a>
+            </div>
+
+          </div>
+          <div class="team-members-wrap">
+            <strong>{{members.length}} MEMBERS</strong>
+            <br>
+            <ol class="team-members">
+              <li ng-repeat="member in members">
+                <a class="url hoverable" rel="contact" title="Jason Mayo" href="/madebymayo">
+                  <div data-picture="" data-class="photo">
+                    <div data-src="https://d13yacurqjgara.cloudfront.net/users/5577/avatars/mini/322f5e07c7d43d5123a1fac2ea59cb9e.jpg?1440183894"></div>
+                    <div data-media="(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)"></div>
+                    <img alt="{{member.name}}" class="photo" src="{{member.avatar_url}}"></div>
+                </a>
+              </li>
+            </ol>
+          <ul class="profile-details">
+            <li>
+              <a class="elsewhere-twitter" rel="tipsy noreferrer" target="_blank" href="/madebyshape/click?type=twitter" original-title="madebyshape on Twitter">
+                <img height="20" src="https://d13yacurqjgara.cloudfront.net/assets/profile/icon-elsewhere-twitter-49cd21f9f8211cf90300d756c8cf6955.png" alt="Icon elsewhere twitter">
+              </a>
+            </li>
+            <li>
+              <a class="elsewhere-website" rel="tipsy noreferrer" target="_blank" href="/madebyshape/click?type=site" original-title="http://www.madebyshape.co.uk">
+                <img width="20" src="https://d13yacurqjgara.cloudfront.net/assets/profile/icon-elsewhere-website-6ea6901d34469ac1384cd1c22c414ce0.png" alt="Icon elsewhere website">
+              </a>
+            </li>
+          </ul>
+          </div>
+          <div class="stats">
+            Followers {{team.followers_count}}
+            <!-- Following {{team.following_count}} -->
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="filter">
+          <div class="member-actions">
+            <a class="action settings" href="#">
+              <span>Actions</span>
+            </a>
+            <ul class="actions-on-user">
+              <li class="shot-display">
+                <h3>Display Options</h3>
+                <ul class="large-small">
+                  <li rel="tipsy" data-tipsy-class="tipsy-alt" class="small-with-meta active" original-title="Small with info">
+                    <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="72" height="72" viewBox="0 0 72 72">
+                        <path d="M48.992,53.0045 L23.009,53.0045 C21.358,53.0045 20.01,51.6595 20.01,50.0035 L20.01,21.9965 C20.01,20.3375 21.358,18.9955 23.009,18.9955 L48.992,18.9955 C50.649,18.9955 51.99,20.3375 51.99,21.9965 L51.99,50.0035 C51.99,51.6595 50.649,53.0045 48.992,53.0045 L48.992,53.0045 L48.992,53.0045 Z M27.989,47.9995 L43.989,47.9995 C45.094,47.9995 45.989,47.1045 45.989,45.9995 C45.989,44.8945 45.094,43.9995 43.989,43.9995 L27.989,43.9995 C26.884,43.9995 25.989,44.8945 25.989,45.9995 C25.989,47.1045 26.884,47.9995 27.989,47.9995 L27.989,47.9995 L27.989,47.9995 Z M45.993,24.9965 L26.008,24.9965 L26.008,39.0025 L45.993,39.0025 L45.993,24.9965 L45.993,24.9965 Z" fill="#333333"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li rel="tipsy" data-tipsy-class="tipsy-alt" class="large-with-meta " original-title="Large with info">
+                    <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="72" height="72" viewBox="0 0 72 72">
+                        <path d="M56.992,61.0045 L15.009,61.0045 C13.358,61.0045 12.01,59.6595 12.01,58.0035 L12.01,13.9965 C12.01,12.3375 13.358,10.9955 15.009,10.9955 L56.992,10.9955 C58.649,10.9955 59.99,12.3375 59.99,13.9965 L59.99,58.0035 C59.99,59.6595 58.649,61.0045 56.992,61.0045 L56.992,61.0045 Z M19.989,55.9995 L51.989,55.9995 C53.094,55.9995 53.989,55.1045 53.989,53.9995 C53.989,52.8945 53.094,51.9995 51.989,51.9995 L19.989,51.9995 C18.884,51.9995 17.989,52.8945 17.989,53.9995 C17.989,55.1045 18.884,55.9995 19.989,55.9995 L19.989,55.9995 Z M53.993,16.9965 L18.008,16.9965 L18.008,47.0025 L53.993,47.0025 L53.993,16.9965 L53.993,16.9965 Z" fill="#333333"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li rel="tipsy" data-tipsy-class="tipsy-alt" class="small-without-meta " original-title="Small without info">
+                    <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="72" height="72" viewBox="0 0 72 72">
+                        <path d="M48.992,49.0045 L23.009,49.0045 C21.358,49.0045 20.01,47.6595 20.01,46.0035 L20.01,25.9965 C20.01,24.3375 21.358,22.9955 23.009,22.9955 L48.992,22.9955 C50.649,22.9955 51.99,24.3375 51.99,25.9965 L51.99,46.0035 C51.99,47.6595 50.649,49.0045 48.992,49.0045 L48.992,49.0045 Z M45.993,28.9965 L26.008,28.9965 L26.008,43.0025 L45.993,43.0025 L45.993,28.9965 L45.993,28.9965 Z" fill="#333333"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li rel="tipsy" data-tipsy-class="tipsy-alt" class="large-without-meta " original-title="Large without info">
+                    <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="72" height="72" viewBox="0 0 72 72">
+                        <path d="M56.992,57.0045 L15.009,57.0045 C13.358,57.0045 12.01,55.6595 12.01,54.0035 L12.01,17.9965 C12.01,16.3375 13.358,14.9955 15.009,14.9955 L56.992,14.9955 C58.649,14.9955 59.99,16.3375 59.99,17.9965 L59.99,54.0035 C59.99,55.6595 58.649,57.0045 56.992,57.0045 L56.992,57.0045 Z M53.993,20.9965 L18.008,20.9965 L18.008,51.0025 L53.993,51.0025 L53.993,20.9965 L53.993,20.9965 Z" fill="#333333"></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <a class="show-list-ui" href="/madebyshape/listings"> <span class="badge badge-pro">Pro</span> Add or remove from lists…
+                    </a>
+                  </li>
+                  <li class="gift-pro">
+                    <a href="/pro?user=madebyshape">Gift a Pro account</a>
+                  </li>
+                  <li class="edit-account">
+                    <a href="/account">Edit your account</a>
+                  </li>
+                  <li class="remove-from-team">
+                    <a href="/account/members/madebyshape">Remove from team</a>
+                  </li>
+                  <li class="leave-team">
+                    <a href="/account/members/madebyshape">Leave this team</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="negative">
+                <ul>
+                  <li>
+                    <a class="block" href="/blocks?id=madebyshape">Block MadeByShape</a>
+                    <a class="unblock" href="/blocks/madebyshape">Unblock MadeByShape</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <form class="select-sort-form" action="/madebyshape" accept-charset="UTF-8" method="get">
+            <input name="utf8" type="hidden" value="✓">
+            <select name="filter" id="filter">
+              <option value="">Team shots</option>
+              <option value="non-team">Personal shots</option>
+            </select>
+          </form>
+        </div>
+        <ol class="dribbbles group">
+          <li id="screenshot-2484730" class="group team" ng-repeat="shot in shots">
+            <div class="dribbble">
+              <div class="dribbble-shot">
+                <div class="dribbble-img">
+                  <a class="dribbble-link" ng-href="{{shot.html_url}}">
+                    <div data-picture="" data-alt="{{shot.title}}">
+                      <!-- <div data-src="{{shot.images.teaser}}"></div> -->
+                      <div data-media="(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)"></div>
+                      <noscript>
+                        <img alt="{{shot.title}}" src="{{shot.images.teaser}}">
+                      </noscript>
+                      <img alt="{{shot.title}}" ng-src="{{shot.images.normal}}"></div>
+                  </a>
+                  <a class="dribbble-over" href="{{shot.html_url}}"> <strong>{{shot.title}}</strong>
+                    <span class="comment" ng-bind-html="shot.description"></span>
+                    <em class="timestamp">January 27, 2016</em>
+                  </a>
+                </div>
+                <ul class="tools group" style="visibility: visible;">
+                  <li class="fav">
+                    <a href="#" class="toggle-fav" original-title=""> </a><a href="/shots/2484730-Web-App-List/fans" original-title="View fans of this shot">43</a>
+                  </li>
+                  <li class="cmnt">
+                    <span original-title="">{{shot.likes_count}}</span>
+                  </li>
+                  <li class="views">
+                    <span>{{shot.views_count}}</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="extras">
+                <a href="/shots/2484730-Web-App-List/rebounds">
+                  <span rel="tipsy" class="rebound-mark has-rebounds" original-title="This shot has rebounds.">0</span>
+                </a>
+                <a href="/">
+                  <span rel="tipsy" class="rebound-mark is-rebound" original-title="This shot is a rebound (reply) of another shot. View the original.">
+                    <img width="16" height="16" alt="Rebound" src="https://d13yacurqjgara.cloudfront.net/assets/icon-rebound-2x-b7a869131942ad835e02ad0a4d3b219a.png">
+                  </span>
+                </a>
+                <span rel="tipsy" class="attachments-mark" original-title="This shot has attachments">
+                  <img width="16" height="16" alt="Attachments" ng-src="{{shot.user.avatar_url}}">
+                </span>
+              </div>
+            </div>
+            <h2 class="attribution hover-card-parent">
+              <span class="attribution-team">
+                <a class="url hoverable" rel="contact" href="/madebyshape"><img class="photo" ng-src="{{shot.user.avatar_url}}"> {{shot.user.name}}</a>
+                  <a class="badge-link" href="/teams">
+                    <span class="badge badge-team">Team</span>
+                </a>
+              </span>
+              <span class="attribution-user">
+                <a class="url hoverable" rel="contact" href="/madebymayo">
+                  <img class="photo" src="{{shot.user.avatar_url}}"> {{shot.user.name}}</a>
+                  <a class="badge-link" href="/pro">
+                    <span class="badge badge-pro">Pro</span>
+                  </a>
+              </span>
+            </h2>
+          </li>
+        </ol>
+        <div class="infinite" style="display: none;">
+          <a href="#" class="form-btn">Load more…</a>
+        </div>
+        <div class="loading-more" style="display: none;">
+          <span class="processing">Loading more…</span>
+        </div>
+        <div class="back-to-top">
+          <a href="#"><img title="Back to Top" src="https://d13yacurqjgara.cloudfront.net/assets/icon-backtotop-795f8ffd4ef0525a2fdb42adf6ab07dd.png" alt="Icon backtotop"></a>
+        </div>
+      </div>
+    </div>
+    <!-- /content -->
+  </div>
+</div>
